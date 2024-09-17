@@ -6,11 +6,21 @@
 #include "Hashgestion.h"
 #include "AesGestion.h"
 
+using namespace std;
+
 int main()
 {
 	HashGestion LM;
-	std::string monMessageHash = "Super message superchouette";
-	std::cout << LM.CalculateSHA256(monMessageHash) << std::endl;
+	string monMessageHash = "Super message superchouette";
+	cout << LM.CalculateSHA256(monMessageHash) << endl;
+
+	cout << "Fichier text :" << endl;
+	cout << LM.CalculateFileSHA256("fichier.txt") << endl;
+
+	cout << "-----------------------------------" << endl;
+
+	cout << "Fichier binaire :" << endl;
+	cout << LM.CalculateFileSHA256("binaire.txt") << endl;
 
 }
 
