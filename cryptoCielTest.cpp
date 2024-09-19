@@ -23,8 +23,8 @@ int main()
 	 * \return
 	 */
 
-	string clefPublique = "./PublicKey.pem";
-	string clefPrivee = "./PrivateKey.pem";
+	string clefPublique = "PublicKey.pem";
+	string clefPrivee = "PrivateKey.pem";
 
 	/**
 	 * \brief Generation d'une paire de clefs (public et privee)
