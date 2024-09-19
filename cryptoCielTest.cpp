@@ -33,6 +33,24 @@ int main()
 	 */
 	RsaGestion.generationClef(clefPublique, clefPrivee, 1028);
 
+	/**
+	 * \brief Chiffrer string aavec la clef publique
+	 * 
+	 * \return 
+	 */
+
+	string texteChiffrer = "Texte a chiffrer";
+	string texteChiffre = RsaGestion.chiffrementRsa(texteChiffrer);
+	cout << "Texte chiffrer : " << texteChiffre << endl;
+
+	/**
+	* \brief D?chiffrer string avec la clef privee
+	*
+	* \return
+	*/
+	string texteDechiffre = RsaGestion.dechiffrementRsa(texteChiffre);
+	cout << "Texte dechiffre : " << texteDechiffre << endl;
+
 	return 0;
 }
 
