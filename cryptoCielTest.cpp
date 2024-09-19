@@ -41,7 +41,7 @@ int main()
 	string texteChiffrer = "Texte a chiffrer";
 
 	string texteChiffre = RsaGestion.chiffrementRsa(texteChiffrer);
-	cout << "Texte chiffrer : " << texteChiffre << endl;
+	cout << "Texte un fois chiffrer  : " << texteChiffre << endl;
 
 	/**
 	* \brief D?chiffrer string avec la clef privee
