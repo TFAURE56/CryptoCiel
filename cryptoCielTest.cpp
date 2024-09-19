@@ -6,12 +6,35 @@
 #include "Hashgestion.h"
 #include "AesGestion.h"
 
+using namespace std;
+
 int main()
 {
-	HashGestion LM;
-	std::string monMessageHash = "Super message superchouette";
-	std::cout << LM.CalculateSHA256(monMessageHash) << std::endl;
+	/**
+	 * \brief Constructeur de la classe RsaGestion
+	 *
+	 * \return
+	 */
+	RsaGestion RsaGestion;
 
+	/**
+	 * \brief création variable pour generation clefs RSA
+	 *
+	 * \return
+	 */
+
+	string clefPublique = "./PublicKey.pem";
+	string clefPrivee = "./PrivateKey.pem";
+
+	/**
+	 * \brief Generation d'une paire de clefs (public et privee)
+	 *
+	 * \return
+	 */
+	RsaGestion.generationClef(clefPublique, clefPrivee, 1028);
+
+	return 0;
 }
+
 
 
