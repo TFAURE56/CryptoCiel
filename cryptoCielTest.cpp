@@ -18,20 +18,26 @@ int main()
 	RsaGestion RsaGestion;
 
 	/**
-	 * \brief création variable pour generation clefs RSA
-	 *
-	 * \return
+	 * \brief Charger la clef a partir du fichier
+	 * 
+	 * \return 
 	 */
-
-	string clefPublique = "PublicKey.pem";
-	string clefPrivee = "PrivateKey.pem";
+	RsaGestion.chargementClefs("PublicKey.pem", "PrivateKey.pem");
 
 	/**
-	 * \brief Generation d'une paire de clefs (public et privee)
-	 *
-	 * \return
+	 * \brief chiffrer text dans un fichier
+	 * 
+	 * \return 
 	 */
-	RsaGestion.generationClef(clefPublique, clefPrivee, 1028);
+	RsaGestion.chiffreDansFichier("T'es bete Leo", "donnees_chiffrees.txt");
+
+	/**
+	 * \brief Dechiffrer fichier et save dans un autre fichier
+	 * 
+	 * \return 
+	 */
+	RsaGestion.dechiffrementFichier("donnees_chiffrees.txt", "donnees_dechiffrees.txt", 1);
+
 
 	return 0;
 }
